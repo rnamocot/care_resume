@@ -11,13 +11,16 @@
 <!-- ═══════════════════════════ NAV ═══════════════════════════ -->
 <nav>
   <a href="#hero" class="nav-logo">Care R. Emana</a>
-  <ul class="nav-links">
+  <ul class="nav-links" id="navLinks">
     <li><a href="#experience">Experience</a></li>
     <li><a href="#workfiles">Work Files</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#downloads" class="nav-cta">Download CV</a></li>
   </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
@@ -364,10 +367,6 @@
         <div class="wf-desc">Full installation drawing set for Resysta timber composite decking system including plan, section, and detail sheets.</div>
         <div class="wf-tags"><span>Shop Drawing</span><span>Decking</span></div>
         <div class="wf-action">
-          <a href="files/work/decking-master-plan.dwg" download class="wf-btn">
-            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Download
-          </a>
           <span class="wf-avail">Available on request</span>
         </div>
       </div>
@@ -639,6 +638,20 @@
 </footer>
 
 <script>
+  /* Hamburger menu */
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    navLinks.classList.toggle('open');
+  });
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      navLinks.classList.remove('open');
+    });
+  });
+
   /* Work files filter */
   const filterBtns = document.querySelectorAll('.wf-filter');
   const wfCards = document.querySelectorAll('.wf-card');
