@@ -416,6 +416,174 @@ section { padding: 90px 5vw; }
   border-radius: 3px;
 }
 
+/* ── WORK FILES ── */
+#workfiles { background: var(--white); }
+
+.wf-intro {
+  font-size: 0.95rem;
+  color: var(--text-mid);
+  max-width: 640px;
+  margin-bottom: 2rem;
+  line-height: 1.75;
+}
+
+.wf-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 2.2rem;
+}
+
+.wf-filter {
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  border: 1.5px solid var(--border);
+  background: transparent;
+  color: var(--text-mid);
+  font-size: 0.82rem;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 0.02em;
+}
+
+.wf-filter:hover {
+  border-color: var(--gold);
+  color: var(--navy);
+}
+
+.wf-filter.active {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: var(--white);
+}
+
+.wf-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.2rem;
+}
+
+.wf-card {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: all 0.22s ease;
+}
+
+.wf-card:hover {
+  box-shadow: var(--card-hover);
+  transform: translateY(-3px);
+  border-color: rgba(201,168,76,0.35);
+}
+
+.wf-card.hidden { display: none; }
+
+.wf-file-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wf-badge {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  padding: 0.22rem 0.65rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.wf-badge.dwg { background: #dbeafe; color: #1d4ed8; }
+.wf-badge.skp { background: #ffedd5; color: #c2410c; }
+.wf-badge.pdf { background: #fee2e2; color: #b91c1c; }
+.wf-badge.rvt { background: #ede9fe; color: #6d28d9; }
+
+.wf-size {
+  font-size: 0.75rem;
+  color: var(--text-light);
+}
+
+.wf-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--navy);
+}
+
+.wf-name {
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--navy);
+  line-height: 1.4;
+}
+
+.wf-desc {
+  font-size: 0.83rem;
+  color: var(--text-mid);
+  line-height: 1.65;
+  flex: 1;
+}
+
+.wf-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.wf-tags span {
+  background: rgba(26,39,68,0.07);
+  color: var(--navy);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.18rem 0.55rem;
+  border-radius: 3px;
+}
+
+.wf-action {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 0.25rem;
+  flex-wrap: wrap;
+}
+
+.wf-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--navy);
+  color: var(--white);
+  padding: 0.45rem 0.9rem;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.wf-btn:hover {
+  background: var(--navy-light);
+  transform: translateY(-1px);
+}
+
+.wf-avail {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  font-style: italic;
+}
+
 /* ── SKILLS ── */
 #skills { background: var(--cream); }
 
