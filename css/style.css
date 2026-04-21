@@ -220,14 +220,52 @@ nav {
   transform: translateY(-2px);
 }
 
-.hero-badge {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(201,168,76,0.25);
-  border-radius: 12px;
-  padding: 2rem;
-  text-align: center;
+.hero-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
   min-width: 200px;
 }
+
+.hero-profile-img-wrap {
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  box-shadow: 0 8px 32px rgba(201,168,76,0.3);
+  flex-shrink: 0;
+}
+
+.hero-profile-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  border: 3px solid var(--navy);
+  display: block;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 0;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(201,168,76,0.25);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.hero-stat {
+  flex: 1;
+  text-align: center;
+  padding: 0.9rem 0.5rem;
+  border-right: 1px solid rgba(201,168,76,0.2);
+}
+
+.hero-stat:last-child { border-right: none; }
 
 .hero-badge-number {
   font-family: 'Playfair Display', serif;
@@ -854,7 +892,7 @@ footer span { color: var(--gold); }
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
   .hero-inner { grid-template-columns: 1fr; }
-  .hero-badge { display: none; }
+  .hero-profile { display: none; }
   .skills-grid { grid-template-columns: 1fr; }
   .exp-header { grid-template-columns: 1fr; }
   .exp-dot { display: none; }
