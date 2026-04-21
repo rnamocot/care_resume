@@ -345,18 +345,24 @@ section { padding: 90px 5vw; }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-  gap: 1.2rem;
+  grid-template-columns: 1fr;
+  gap: 1rem;
 }
 
 .project-card {
   background: var(--cream);
   border: 1px solid var(--border);
   border-radius: 8px;
-  padding: 1.4rem;
+  padding: 1.2rem 1.4rem;
   transition: all 0.25s ease;
   position: relative;
   overflow: hidden;
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  grid-template-rows: auto auto auto;
+  column-gap: 1.2rem;
+  row-gap: 0.25rem;
+  align-items: start;
 }
 
 .project-card::before {
@@ -386,26 +392,43 @@ section { padding: 90px 5vw; }
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 0.9rem;
   color: var(--gold);
+  grid-column: 1;
+  grid-row: 1 / 4;
+  align-self: start;
+  margin-top: 2px;
 }
 
 .project-name {
   font-weight: 700;
   font-size: 0.95rem;
   color: var(--navy);
-  margin-bottom: 0.4rem;
+  grid-column: 2;
+  grid-row: 1;
+  margin-bottom: 0;
+}
+
+.project-desc {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.project-tag {
+  grid-column: 2;
+  grid-row: 3;
+  margin-top: 0.3rem;
 }
 
 .project-desc {
   font-size: 0.84rem;
   color: var(--text-mid);
   line-height: 1.6;
+  grid-column: 2;
+  grid-row: 2;
 }
 
 .project-tag {
   display: inline-block;
-  margin-top: 0.8rem;
   background: rgba(26,39,68,0.08);
   color: var(--navy);
   font-size: 0.72rem;
@@ -414,6 +437,7 @@ section { padding: 90px 5vw; }
   text-transform: uppercase;
   padding: 0.2rem 0.6rem;
   border-radius: 3px;
+  align-self: start;
 }
 
 /* ── WORK FILES ── */
